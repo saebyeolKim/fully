@@ -1,0 +1,10 @@
+# Swagger springdoc-ui Configuration
+springdoc:
+  packages-to-scan: com.project.fully.controller
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    path: swagger-ui.html
+    disable-swagger-default-url: true
+    display-request-duration: true
+    operations-sorter: alpha

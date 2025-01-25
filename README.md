@@ -12,7 +12,11 @@
 - [ ] H2
 - [ ] Docker
 - [ ] AWS
- 
+
+UML
+---
+![UML](https://github.com/user-attachments/assets/1ceb7a56-9c22-41ac-a69a-926fa1c55d46)
+
 Business Model Canvas <br>
 ---
 ###### ※ 자세한 구현 내용은 API 명세서를 확인해주세요.

@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    group:
+      local: common, local
+      dev: common, dev
+      prod: common, prod
+---
+spring:
+  config:
+    activate:
+      on-profile: "common"
+  application:
+  name: fully
+  # H2 ?? ???
+  h2:
+    console:
+      enabled: true
+      # ?? ?? ?? (???: /h2-console)
+      path: /h2-console
+  # JDBC URL (in-memory ?? ?? ?? ??)
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:fully
+    username: sa
+    password:
+
+server:
+  port: 8080

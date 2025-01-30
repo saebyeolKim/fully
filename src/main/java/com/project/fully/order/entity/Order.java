@@ -1,21 +1,24 @@
-package com.project.fully.entity;
+package com.project.fully.order.entity;
 
+import com.project.fully.member.entity.Member;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Entity
-@Table(name = "Member")
 @Getter
-public class User {
+@Entity
+@Table(name = "order")
+public class Order {
 
     @Id
-    @Column(name = "memberId", nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @ManyToOne(fetch =  FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
+
+
 }

@@ -20,7 +20,7 @@ public class Menu extends BaseEntity {
     @Comment("카테고리")
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "food_category_id")
-    private FoodCategory category;
+    private FoodCategory foodCategory;
 
     @Comment("메뉴이름(멕시칸비프/소불고기/소세지...)")
     @Column(nullable = false, length = 50)
@@ -30,8 +30,8 @@ public class Menu extends BaseEntity {
     @Column(nullable = false)
     private int price;
 
-    public void setFoodCategory(FoodCategory category) {
-        this.category = category;
+    public void setFoodCategory(FoodCategory foodCategory) {
+        this.foodCategory = foodCategory;
     }
 
 }

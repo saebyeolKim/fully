@@ -34,10 +34,6 @@ public class FoodCategory extends BaseEntity {
     @OneToMany(mappedBy = "foodCategory", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Ingredient> ingredients = new ArrayList<>();
 
-    private enum Category {
-        MENU, INGREDIENT
-    }
-
     public void addMenu(Menu menu) {
         menus.add(menu);
         menu.setFoodCategory(this);
